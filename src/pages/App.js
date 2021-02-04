@@ -1,6 +1,7 @@
 //import logo from 'images/logo.svg';
 import 'styles/App.css';
 import CharacterSheet from 'components/CharacterSheet.js';
+import TestComponent from 'components/TestComponent.js';
 
 const dummyJson = {
   character_id: 67,
@@ -14,6 +15,7 @@ const dummyJson = {
     armor: 'medium',
     defense: 2,
     speed: 5,
+    awareness: 7
   },
   pillars: ['Indominable Will', 'Arts and Wonder'],
   passives: [
@@ -39,6 +41,7 @@ function App() {
   return (
     <div className="App">
       <CharacterSheet characterJson={dummyJson} />
+      <TestComponent /> 
     </div>
   );
 }

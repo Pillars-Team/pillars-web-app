@@ -2,8 +2,10 @@ import React from 'react';
 //import Button from './Button'; // Import a component from another file
 import { Button } from 'react-bootstrap'
 import $ from 'jquery';
+import 'styles/CharacterSheet.css';
 import HealthBarRow from 'components/HealthBarRow.js';
-import StatRow from 'components/StatRow.js';
+import StatBox from 'components/StatBox.js';
+
 import canvas from "images/canvas.jpg";
 
 
@@ -44,15 +46,19 @@ class CharacterSheet extends React.Component {
 
     render() {
         return (
-            <div className='m-2 p-2 border border-dark' style={{ backgroundImage: `url(${canvas}` }}>
+            <div className='m-2 p-2' style={{ width: `300px`, border: 'purple 1px solid' }}>
                 <h1 className='text-center'>{this.props.characterJson.name}</h1>
                 <HealthBarRow maxHp={this.props.characterJson.stats.maxHp} />
-                <StatRow name='Defense' statValue={this.props.characterJson.stats.defense} />
 
-                <div className='d-flex flex-column my-4'>
-                    <StatRow name='Nimble' statValue={this.props.characterJson.stats.nimble} />
-                    <StatRow name='Mind' statValue={this.props.characterJson.stats.mind} />
-                    <StatRow name='Brawn' statValue={this.props.characterJson.stats.brawn} />
+                <div className='d-flex flex-row my-1'>
+                    <StatBox name='Defense' statValue={this.props.characterJson.stats.defense} />
+                    <StatBox name='Awareness' statValue={this.props.characterJson.stats.awareness} />
+                </div>
+
+                <div className='d-flex flex-row my-1'>
+                    <StatBox name='Nimble' statValue={this.props.characterJson.stats.nimble} />
+                    <StatBox name='Mind' statValue={this.props.characterJson.stats.mind} />
+                    <StatBox name='Brawn' statValue={this.props.characterJson.stats.brawn} />
                 </div>
 
                 <div className='d-flex flex-row'>

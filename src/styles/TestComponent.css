@@ -1,0 +1,34 @@
+/* bevel size, left offset and color settings next 3 lines */ 
+.bvc { left: -15px }
+.bevel, .content { border-width: 15px }
+.bevel, .content { border-color: #efefef; border-style:solid; }
+
+.bvc {
+    width: 90%; /* width of overall box, variable or fixed */ 
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.bvc .tr, .bvc .tl, .bvc .br, .bvc .bl { height: 0px; width: 100%; }
+.bvc .tr, .bvc .tl { border-top: 0; }
+.bvc .br, .bvc .bl { border-bottom: 0; }
+.bvc .tr, .bvc .br { border-right-color: transparent; }
+.bvc .tl, .bvc .bl { border-left-color: transparent; }
+.no_bevel { height: 0px; width: 100%; border-bottom: 0; }
+
+.content {
+    background: #efefef url(http://placehold.it/2000x200/efefef) no-repeat;
+    width: 100%;
+    border-top: 0;
+    border-bottom: 0;
+}
+
+body {
+    background: url(http://placehold.it/1x2/333/777);
+    margin: 20px;
+}
+h2 {
+    margin-bottom: 10px; 
+    color: white;        
+}

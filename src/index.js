@@ -1,7 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'styles/index.css';
-import 'styles/StatRow.css';
 import App from 'pages/App';
 import reportWebVitals from './reportWebVitals';
 
